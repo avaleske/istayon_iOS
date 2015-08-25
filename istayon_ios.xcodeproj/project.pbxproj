@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1D743061B8C142500CDA7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D743041B8C142500CDA7CE /* Main.storyboard */; };
 		E1FB3ADE1B8C0F220077733F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3ADD1B8C0F220077733F /* main.m */; };
 		E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE01B8C0F220077733F /* AppDelegate.m */; };
 		E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */; };
 		E1FB3AE71B8C0F220077733F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE61B8C0F220077733F /* ViewController.m */; };
-		E1FB3AEA1B8C0F220077733F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1FB3AE81B8C0F220077733F /* Main.storyboard */; };
 		E1FB3AEC1B8C0F220077733F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1FB3AEB1B8C0F220077733F /* Images.xcassets */; };
 		E1FB3AEF1B8C0F220077733F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1FB3AED1B8C0F220077733F /* LaunchScreen.xib */; };
 		E1FB3AFB1B8C0F230077733F /* istayon_iosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AFA1B8C0F230077733F /* istayon_iosTests.m */; };
@@ -28,7 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1FB3AD81B8C0F220077733F /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = istayon_ios.app; path = "/Users/avaleske/code/taylr/istayon_ios/build/Debug-iphoneos/istayon_ios.app"; sourceTree = "<absolute>"; };
+		E1D743021B8C114700CDA7CE /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = istayon_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = istayon_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1D743051B8C142500CDA7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = istayon_ios/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1FB3ADC1B8C0F220077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3ADD1B8C0F220077733F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1FB3ADF1B8C0F220077733F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -36,10 +38,8 @@
 		E1FB3AE31B8C0F220077733F /* istayon_ios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = istayon_ios.xcdatamodel; sourceTree = "<group>"; };
 		E1FB3AE51B8C0F220077733F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		E1FB3AE61B8C0F220077733F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E1FB3AE91B8C0F220077733F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1FB3AEB1B8C0F220077733F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1FB3AEE1B8C0F220077733F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E1FB3AF41B8C0F230077733F /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = istayon_iosTests.xctest; path = "/Users/avaleske/code/taylr/istayon_ios/build/Debug-iphoneos/istayon_iosTests.xctest"; sourceTree = "<absolute>"; };
 		E1FB3AF91B8C0F230077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3AFA1B8C0F230077733F /* istayon_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = istayon_iosTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,6 +67,8 @@
 			children = (
 				E1FB3ADA1B8C0F220077733F /* istayon_ios */,
 				E1FB3AF71B8C0F230077733F /* istayon_iosTests */,
+				E1D743021B8C114700CDA7CE /* istayon_ios.app */,
+				E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +79,9 @@
 				E1FB3AE01B8C0F220077733F /* AppDelegate.m */,
 				E1FB3AE51B8C0F220077733F /* ViewController.h */,
 				E1FB3AE61B8C0F220077733F /* ViewController.m */,
-				E1FB3AE81B8C0F220077733F /* Main.storyboard */,
 				E1FB3AEB1B8C0F220077733F /* Images.xcassets */,
 				E1FB3AED1B8C0F220077733F /* LaunchScreen.xib */,
+				E1D743041B8C142500CDA7CE /* Main.storyboard */,
 				E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */,
 				E1FB3ADB1B8C0F220077733F /* Supporting Files */,
 			);
@@ -129,7 +131,7 @@
 			);
 			name = istayon_ios;
 			productName = istayon_ios;
-			productReference = E1FB3AD81B8C0F220077733F /* istayon_ios.app */;
+			productReference = E1D743021B8C114700CDA7CE /* istayon_ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 		E1FB3AF31B8C0F230077733F /* istayon_iosTests */ = {
@@ -147,7 +149,7 @@
 			);
 			name = istayon_iosTests;
 			productName = istayon_iosTests;
-			productReference = E1FB3AF41B8C0F230077733F /* istayon_iosTests.xctest */;
+			productReference = E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1FB3AEA1B8C0F220077733F /* Main.storyboard in Resources */,
+				E1D743061B8C142500CDA7CE /* Main.storyboard in Resources */,
 				E1FB3AEF1B8C0F220077733F /* LaunchScreen.xib in Resources */,
 				E1FB3AEC1B8C0F220077733F /* Images.xcassets in Resources */,
 			);
@@ -238,12 +240,13 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E1FB3AE81B8C0F220077733F /* Main.storyboard */ = {
+		E1D743041B8C142500CDA7CE /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				E1FB3AE91B8C0F220077733F /* Base */,
+				E1D743051B8C142500CDA7CE /* Base */,
 			);
 			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		E1FB3AED1B8C0F220077733F /* LaunchScreen.xib */ = {
@@ -412,6 +415,7 @@
 				E1FB3B001B8C0F230077733F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E1FB3B011B8C0F230077733F /* Build configuration list for PBXNativeTarget "istayon_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +424,7 @@
 				E1FB3B031B8C0F230077733F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
