@@ -28,7 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E1FB3AD81B8C0F220077733F /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = istayon_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FB3AD81B8C0F220077733F /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = istayon_ios.app; path = "/Users/avaleske/code/taylr/istayon_ios/build/Debug-iphoneos/istayon_ios.app"; sourceTree = "<absolute>"; };
 		E1FB3ADC1B8C0F220077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3ADD1B8C0F220077733F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1FB3ADF1B8C0F220077733F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,7 +39,7 @@
 		E1FB3AE91B8C0F220077733F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1FB3AEB1B8C0F220077733F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1FB3AEE1B8C0F220077733F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		E1FB3AF41B8C0F230077733F /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = istayon_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1FB3AF41B8C0F230077733F /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = istayon_iosTests.xctest; path = "/Users/avaleske/code/taylr/istayon_ios/build/Debug-iphoneos/istayon_iosTests.xctest"; sourceTree = "<absolute>"; };
 		E1FB3AF91B8C0F230077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3AFA1B8C0F230077733F /* istayon_iosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = istayon_iosTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,17 +67,7 @@
 			children = (
 				E1FB3ADA1B8C0F220077733F /* istayon_ios */,
 				E1FB3AF71B8C0F230077733F /* istayon_iosTests */,
-				E1FB3AD91B8C0F220077733F /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		E1FB3AD91B8C0F220077733F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				E1FB3AD81B8C0F220077733F /* istayon_ios.app */,
-				E1FB3AF41B8C0F230077733F /* istayon_iosTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		E1FB3ADA1B8C0F220077733F /* istayon_ios */ = {
@@ -187,7 +177,7 @@
 				Base,
 			);
 			mainGroup = E1FB3ACF1B8C0F220077733F;
-			productRefGroup = E1FB3AD91B8C0F220077733F /* Products */;
+			productRefGroup = E1FB3ACF1B8C0F220077733F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
