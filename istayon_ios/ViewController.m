@@ -12,13 +12,20 @@
 
 @end
 
-@implementation ViewController
+@implementation ViewController {
+    NSDictionary *_data;
+    DataManager *_manager;
+    UIRefreshControl * __weak _refreshControl;
+}
 
 @synthesize scrollView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+
+    _manager = [[DataManager alloc] init];
+    _manager.communicator = [[Communicator alloc] init];
+    _manager.delegate = self;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh" ];
@@ -32,12 +39,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)refreshView: (UIRefreshControl *) refresh{
-    double delay = 2;
-    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC);
-    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-        [refresh endRefreshing];
-    });
+- (void)refreshView: (UIRefreshControl *) refresh {
+    [_manager fetchLikeData];
+    [refresh endRefreshing];
+
+}
+
+#pragma mark - DataManagerDelegate
+
+- (void)didRecieveLikeData:(NSDictionary *)data {
+    
+    [_refreshControl endRefreshing];
+}
+
+- (void)fetchingDataFailedWithError:(NSError *)error {
+    NSLog(@"Error %@; %@", error, [error localizedDescription]);
+    [_refreshControl endRefreshing];
 }
 
 @end

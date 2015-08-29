@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Lorem ipsum blah blah blah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni">
-                                        <rect key="frame" x="8" y="289" width="584" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Lorem ipsum blah blah blah" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni">
+                                        <rect key="frame" x="8" y="21" width="584" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -29,12 +29,18 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="EbV-BG-hni" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leadingMargin" id="Qyh-h6-DBQ"/>
-                                    <constraint firstItem="EbV-BG-hni" firstAttribute="trailing" secondItem="4c5-Ij-N6I" secondAttribute="trailingMargin" id="eGg-Qn-SiA"/>
+                                    <constraint firstAttribute="centerX" secondItem="EbV-BG-hni" secondAttribute="centerX" id="Wbn-ml-Qeg"/>
+                                    <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="top" constant="21" id="v1D-pi-rdt"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="4c5-Ij-N6I" secondAttribute="trailing" constant="-16" id="4D9-TF-Jli"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="bottom" id="A5m-l6-2Gm"/>
+                            <constraint firstItem="4c5-Ij-N6I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Uzo-M4-LEf"/>
+                            <constraint firstItem="4c5-Ij-N6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="fSj-do-Ct3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollView" destination="4c5-Ij-N6I" id="H1d-tM-aiN"/>

@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "DataManager.h"
+#import "Communicator.h"
+
+@interface ViewController : UIViewController <DataManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E1D743061B8C142500CDA7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D743041B8C142500CDA7CE /* Main.storyboard */; };
+		E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743081B8FBEB200CDA7CE /* LikeData.m */; };
+		E1D7430C1B8FF79A00CDA7CE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7430B1B8FF79A00CDA7CE /* DataManager.m */; };
+		E1D743111B91328D00CDA7CE /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743101B91328D00CDA7CE /* Communicator.m */; };
 		E1FB3ADE1B8C0F220077733F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3ADD1B8C0F220077733F /* main.m */; };
 		E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE01B8C0F220077733F /* AppDelegate.m */; };
 		E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */; };
@@ -31,6 +34,14 @@
 		E1D743021B8C114700CDA7CE /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = istayon_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = istayon_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743051B8C142500CDA7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = istayon_ios/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E1D743071B8FBEB200CDA7CE /* LikeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LikeData.h; sourceTree = "<group>"; };
+		E1D743081B8FBEB200CDA7CE /* LikeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LikeData.m; sourceTree = "<group>"; };
+		E1D7430A1B8FF79A00CDA7CE /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		E1D7430B1B8FF79A00CDA7CE /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		E1D7430D1B9006B000CDA7CE /* DataManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManagerDelegate.h; sourceTree = "<group>"; };
+		E1D7430E1B91320100CDA7CE /* CommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicatorDelegate.h; sourceTree = "<group>"; };
+		E1D7430F1B91328D00CDA7CE /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Communicator.h; sourceTree = "<group>"; };
+		E1D743101B91328D00CDA7CE /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Communicator.m; sourceTree = "<group>"; };
 		E1FB3ADC1B8C0F220077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3ADD1B8C0F220077733F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1FB3ADF1B8C0F220077733F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +93,14 @@
 				E1FB3AEB1B8C0F220077733F /* Images.xcassets */,
 				E1FB3AED1B8C0F220077733F /* LaunchScreen.xib */,
 				E1D743041B8C142500CDA7CE /* Main.storyboard */,
+				E1D743071B8FBEB200CDA7CE /* LikeData.h */,
+				E1D743081B8FBEB200CDA7CE /* LikeData.m */,
+				E1D7430A1B8FF79A00CDA7CE /* DataManager.h */,
+				E1D7430B1B8FF79A00CDA7CE /* DataManager.m */,
+				E1D7430E1B91320100CDA7CE /* CommunicatorDelegate.h */,
+				E1D7430F1B91328D00CDA7CE /* Communicator.h */,
+				E1D743101B91328D00CDA7CE /* Communicator.m */,
+				E1D7430D1B9006B000CDA7CE /* DataManagerDelegate.h */,
 				E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */,
 				E1FB3ADB1B8C0F220077733F /* Supporting Files */,
 			);
@@ -215,9 +234,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */,
+				E1D743111B91328D00CDA7CE /* Communicator.m in Sources */,
 				E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */,
+				E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */,
 				E1FB3AE71B8C0F220077733F /* ViewController.m in Sources */,
 				E1FB3ADE1B8C0F220077733F /* main.m in Sources */,
+				E1D7430C1B8FF79A00CDA7CE /* DataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
