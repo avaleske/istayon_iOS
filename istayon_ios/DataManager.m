@@ -20,10 +20,12 @@
     
 - (void)receivedJSON:(NSData *)data {
     NSError *error = nil;
+    NSLog(@"here");
     NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data
                                                              options:kNilOptions
                                                                error:&error];
     if (jsonDict) {
+        NSLog(@"%@", [jsonDict valueForKey:@"message"]);
         [self.delegate didRecieveLikeData:jsonDict];
     } else {
         [self.delegate fetchingDataFailedWithError:error];
@@ -31,6 +33,7 @@
 }
 
 - (void)fetchingDataFailedWithError:(NSError *)error {
+    NSLog(@"or here");
     [self.delegate fetchingDataFailedWithError:error];
 }
 

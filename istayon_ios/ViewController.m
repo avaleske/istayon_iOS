@@ -25,11 +25,14 @@
 
     _manager = [[DataManager alloc] init];
     _manager.communicator = [[Communicator alloc] init];
+    _manager.communicator.delegate = _manager;
     _manager.delegate = self;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
     refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh" ];
     [refreshControl addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
+    
+    _refreshControl = refreshControl;
     
     [self.scrollView insertSubview:refreshControl atIndex:0];
 }
@@ -41,7 +44,7 @@
 
 - (void)refreshView: (UIRefreshControl *) refresh {
     [_manager fetchLikeData];
-    [refresh endRefreshing];
+    //[refresh endRefreshing];
 
 }
 
