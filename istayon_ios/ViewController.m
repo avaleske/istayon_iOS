@@ -10,12 +10,15 @@
 
 @interface ViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *Message;
+
 @end
 
 @implementation ViewController {
     NSDictionary *_data;
     DataManager *_manager;
     UIRefreshControl * __weak _refreshControl;
+    
 }
 
 @synthesize scrollView;
@@ -51,7 +54,8 @@
 #pragma mark - DataManagerDelegate
 
 - (void)didRecieveLikeData:(NSDictionary *)data {
-    
+    NSString *message = [data valueForKey:@"message"];
+    [self.Message setText:message];
     [_refreshControl endRefreshing];
 }
 
