@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *Message;
+@property (weak, nonatomic) IBOutlet UILabel *Details;
 
 @end
 
@@ -32,7 +33,7 @@
     _manager.delegate = self;
     
     UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh" ];
+    //refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh" ];
     [refreshControl addTarget:self action:@selector(refreshView:) forControlEvents:UIControlEventValueChanged];
     
     _refreshControl = refreshControl;
@@ -54,9 +55,12 @@
 #pragma mark - DataManagerDelegate
 
 - (void)didRecieveLikeData:(NSDictionary *)data {
-    NSString *message = [data valueForKey:@"message"];
-    [self.Message setText:message];
-    [_refreshControl endRefreshing];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.Message setText:[data valueForKey:@"message"]];
+        [self.Details setText: @"\u2022 detail one \n \u2022 detail 2"];
+        [self.view setNeedsDisplay];
+        [_refreshControl endRefreshing];
+    });
 }
 
 - (void)fetchingDataFailedWithError:(NSError *)error {
