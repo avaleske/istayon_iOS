@@ -21,16 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail one \n Detail two" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
-                                        <rect key="frame" x="139" y="208" width="323" height="83"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="133" y="261" width="365" height="110"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
                                         <rect key="frame" x="8" y="75" width="584" height="117"/>
                                         <string key="text">Lorem ipsum blah blah blah I need to make sure this works for long lines of text that wrap.  asdf sadf asdf asdf asdf asdf asdf asdf asdf asdf asdf sadf sadfasdf sadf sadf sadf</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
@@ -40,13 +31,24 @@
                                             <rect key="frame" x="8" y="138" width="384" height="88"/>
                                         </variation>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
+                                        <rect key="frame" x="259" y="240" width="82" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="133" y="261" width="365" height="110"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" constant="8" id="4h3-AO-AHC"/>
                                     <constraint firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" constant="-0.5" id="7vB-Hd-nSD"/>
-                                    <constraint firstAttribute="centerY" secondItem="eEy-81-DmI" secondAttribute="centerY" constant="50.5" id="8je-bI-oyW"/>
+                                    <constraint firstItem="eEy-81-DmI" firstAttribute="width" secondItem="4c5-Ij-N6I" secondAttribute="width" multiplier="0.8" id="Ewd-aH-7TF"/>
+                                    <constraint firstItem="EbV-BG-hni" firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" id="IuS-QD-RpN"/>
                                     <constraint firstAttribute="centerX" secondItem="EbV-BG-hni" secondAttribute="centerX" id="Wbn-ml-Qeg"/>
                                     <constraint firstAttribute="trailing" secondItem="EbV-BG-hni" secondAttribute="trailing" constant="8" id="dsr-zP-6gw"/>
+                                    <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="48" id="fnI-JG-F3P"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="centerY" multiplier="0.25" id="q3z-P5-DQk"/>
                                 </constraints>
                             </scrollView>
@@ -56,7 +58,6 @@
                             <constraint firstAttribute="trailingMargin" secondItem="4c5-Ij-N6I" secondAttribute="trailing" constant="-16" id="4D9-TF-Jli"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="bottom" id="A5m-l6-2Gm"/>
                             <constraint firstItem="4c5-Ij-N6I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Uzo-M4-LEf"/>
-                            <constraint firstItem="4c5-Ij-N6I" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="0.14999999999999999" id="fK3-0p-LkV"/>
                             <constraint firstItem="4c5-Ij-N6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="fSj-do-Ct3"/>
                         </constraints>
                     </view>

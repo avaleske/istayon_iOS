@@ -57,7 +57,9 @@
 - (void)didRecieveLikeData:(NSDictionary *)data {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.Message setText:[data valueForKey:@"message"]];
-        [self.Details setText: @"\u2022 detail one \n \u2022 detail 2"];
+        [self.Details setText: [NSString stringWithFormat:@"\u2022 %@\n\u2022 She's liked %@ things.",
+                                [data valueForKey:@"last_liked"],
+                                [data valueForKey:@"count"]]];
         [self.view setNeedsDisplay];
         [_refreshControl endRefreshing];
     });
