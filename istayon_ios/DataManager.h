@@ -10,6 +10,7 @@
 
 #import "DataManagerDelegate.h"
 #import "CommunicatorDelegate.h"
+#import "LikeData.h"
 
 @class Communicator;
 

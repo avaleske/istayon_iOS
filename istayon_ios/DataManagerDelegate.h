@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "LikeData.h"
 
 
 @protocol DataManagerDelegate
-- (void) didRecieveLikeData:(NSDictionary *)data;
+- (void) didRecieveLikeData:(LikeData *)data;
 - (void) fetchingDataFailedWithError:(NSError *)error;
 @end

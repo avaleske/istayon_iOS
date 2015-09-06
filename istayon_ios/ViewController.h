@@ -10,10 +10,10 @@
 
 #import "DataManager.h"
 #import "Communicator.h"
+#import "LikeData.h"
 
 @interface ViewController : UIViewController <DataManagerDelegate>
 
-@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
 @end
 

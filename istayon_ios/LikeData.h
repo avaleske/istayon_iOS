@@ -10,14 +10,17 @@
 
 @interface LikeData : NSObject
 
-@property NSArray *plotData;
-@property NSArray *xTicks;
+@property NSArray *timestamps;
+@property NSArray *counts;
+@property NSArray *Ticks;
 @property NSNumber *xMin;
-@property NSString *lastLiked;
-@property NSNumber *count;
+@property NSString *lastLikedPhrase;
+@property NSNumber *totalCount;
 @property NSString *message;
 @property NSString *word;
 @property NSString *austinAvatarUrl;
 @property NSString *jenAvatarUrl;
 
+- (LikeData *)initWithJson:(NSDictionary *)dict;
+- (LikeData *)initWithTestData;
 @end

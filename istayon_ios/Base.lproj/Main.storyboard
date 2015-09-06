@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
-                                        <rect key="frame" x="8" y="75" width="584" height="117"/>
+                                        <rect key="frame" x="8" y="75" width="584" height="116.5"/>
                                         <string key="text">Lorem ipsum blah blah blah I need to make sure this works for long lines of text that wrap.  asdf sadf asdf asdf asdf asdf asdf asdf asdf asdf asdf sadf sadfasdf sadf sadf sadf</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,8 +31,8 @@
                                             <rect key="frame" x="8" y="138" width="384" height="88"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
-                                        <rect key="frame" x="259" y="240" width="82" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
+                                        <rect key="frame" x="60" y="241" width="480" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -40,16 +40,22 @@
                                             <rect key="frame" x="133" y="261" width="365" height="110"/>
                                         </variation>
                                     </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-QY-rHE" customClass="LineChartView" customModule="Charts">
+                                        <rect key="frame" x="138" y="332.5" width="300" height="200"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" constant="8" id="4h3-AO-AHC"/>
-                                    <constraint firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" constant="-0.5" id="7vB-Hd-nSD"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="width" secondItem="4c5-Ij-N6I" secondAttribute="width" multiplier="0.8" id="Ewd-aH-7TF"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" id="IuS-QD-RpN"/>
                                     <constraint firstAttribute="centerX" secondItem="EbV-BG-hni" secondAttribute="centerX" id="Wbn-ml-Qeg"/>
                                     <constraint firstAttribute="trailing" secondItem="EbV-BG-hni" secondAttribute="trailing" constant="8" id="dsr-zP-6gw"/>
-                                    <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="48" id="fnI-JG-F3P"/>
+                                    <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="50" id="fnI-JG-F3P"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="centerY" multiplier="0.25" id="q3z-P5-DQk"/>
+                                    <constraint firstItem="sHe-QY-rHE" firstAttribute="top" secondItem="eEy-81-DmI" secondAttribute="bottom" constant="50.5" id="qq2-dm-2OF"/>
+                                    <constraint firstAttribute="centerX" secondItem="sHe-QY-rHE" secondAttribute="centerX" constant="12" id="zbv-eL-iD8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -64,6 +70,7 @@
                     <connections>
                         <outlet property="Details" destination="eEy-81-DmI" id="tQA-3O-WKE"/>
                         <outlet property="Message" destination="EbV-BG-hni" id="OqS-Ez-zIg"/>
+                        <outlet property="lineChartView" destination="sHe-QY-rHE" id="UHf-NF-HY6"/>
                         <outlet property="scrollView" destination="4c5-Ij-N6I" id="H1d-tM-aiN"/>
                     </connections>
                 </viewController>

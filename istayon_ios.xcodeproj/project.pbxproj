@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1AEE9281B9B6EED00023CCD /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1AEE9201B9B604300023CCD /* Charts.framework */; };
+		E1AEE9291B9B6EED00023CCD /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E1AEE9201B9B604300023CCD /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E1D743061B8C142500CDA7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D743041B8C142500CDA7CE /* Main.storyboard */; };
 		E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743081B8FBEB200CDA7CE /* LikeData.m */; };
 		E1D7430C1B8FF79A00CDA7CE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7430B1B8FF79A00CDA7CE /* DataManager.m */; };
@@ -21,6 +23,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E1AEE91F1B9B604300023CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1AEE91B1B9B604300023CCD /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
+		E1AEE92A1B9B6EED00023CCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1AEE91B1B9B604300023CCD /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
+			remoteInfo = Charts;
+		};
 		E1FB3AF51B8C0F230077733F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E1FB3AD01B8C0F220077733F /* Project object */;
@@ -30,7 +46,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E1AEE92C1B9B6EED00023CCD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E1AEE9291B9B6EED00023CCD /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		E1AEE91B1B9B604300023CCD /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = Charts/Charts.xcodeproj; sourceTree = "<group>"; };
+		E1AEE9251B9B6E1200023CCD /* istayon_ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "istayon_ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1D743021B8C114700CDA7CE /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = istayon_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = istayon_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743051B8C142500CDA7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = istayon_ios/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AEE9281B9B6EED00023CCD /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,13 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1AEE91C1B9B604300023CCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E1AEE9201B9B604300023CCD /* Charts.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E1FB3ACF1B8C0F220077733F = {
 			isa = PBXGroup;
 			children = (
+				E1AEE9251B9B6E1200023CCD /* istayon_ios-Bridging-Header.h */,
 				E1FB3ADA1B8C0F220077733F /* istayon_ios */,
 				E1FB3AF71B8C0F230077733F /* istayon_iosTests */,
 				E1D743021B8C114700CDA7CE /* istayon_ios.app */,
 				E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */,
+				E1AEE91B1B9B604300023CCD /* Charts.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,10 +186,12 @@
 				E1FB3AD41B8C0F220077733F /* Sources */,
 				E1FB3AD51B8C0F220077733F /* Frameworks */,
 				E1FB3AD61B8C0F220077733F /* Resources */,
+				E1AEE92C1B9B6EED00023CCD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1AEE92B1B9B6EED00023CCD /* PBXTargetDependency */,
 			);
 			name = istayon_ios;
 			productName = istayon_ios;
@@ -182,6 +227,7 @@
 				TargetAttributes = {
 					E1FB3AD71B8C0F220077733F = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = GW25AX9TAL;
 					};
 					E1FB3AF31B8C0F230077733F = {
 						CreatedOnToolsVersion = 6.4;
@@ -200,6 +246,12 @@
 			mainGroup = E1FB3ACF1B8C0F220077733F;
 			productRefGroup = E1FB3ACF1B8C0F220077733F;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E1AEE91C1B9B604300023CCD /* Products */;
+					ProjectRef = E1AEE91B1B9B604300023CCD /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				E1FB3AD71B8C0F220077733F /* istayon_ios */,
@@ -207,6 +259,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E1AEE9201B9B604300023CCD /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = E1AEE91F1B9B604300023CCD /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		E1FB3AD61B8C0F220077733F /* Resources */ = {
@@ -254,6 +316,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E1AEE92B1B9B6EED00023CCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = E1AEE92A1B9B6EED00023CCD /* PBXContainerItemProxy */;
+		};
 		E1FB3AF61B8C0F230077733F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E1FB3AD71B8C0F220077733F /* istayon_ios */;
@@ -368,9 +435,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = istayon_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "istayon_ios-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -378,9 +454,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = istayon_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "istayon_ios-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

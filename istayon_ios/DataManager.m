@@ -25,7 +25,9 @@
                                                                error:&error];
     if (jsonDict) {
         NSLog(@"%@", [jsonDict valueForKey:@"message"]);
-        [self.delegate didRecieveLikeData:jsonDict];
+//        [self.delegate didRecieveLikeData:[[LikeData alloc] initWithJson:jsonDict]];
+        [self.delegate didRecieveLikeData:[[LikeData alloc] initWithTestData]];
+
     } else {
         [self.delegate fetchingDataFailedWithError:error];
     }
