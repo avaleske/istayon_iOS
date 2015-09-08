@@ -12,7 +12,6 @@
 		E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743081B8FBEB200CDA7CE /* LikeData.m */; };
 		E1D7430C1B8FF79A00CDA7CE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7430B1B8FF79A00CDA7CE /* DataManager.m */; };
 		E1D743111B91328D00CDA7CE /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743101B91328D00CDA7CE /* Communicator.m */; };
-		E1E93A2E1B9EA11800E088FC /* libBEMSimpleLineGraph.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E1E93A2D1B9EA11800E088FC /* libBEMSimpleLineGraph.a */; };
 		E1FB3ADE1B8C0F220077733F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3ADD1B8C0F220077733F /* main.m */; };
 		E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE01B8C0F220077733F /* AppDelegate.m */; };
 		E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */; };
@@ -80,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1E93A2E1B9EA11800E088FC /* libBEMSimpleLineGraph.a in Frameworks */,
 				8017EDDC8B753D201685A18C /* Pods_istayon_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
