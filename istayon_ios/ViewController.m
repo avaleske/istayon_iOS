@@ -7,8 +7,6 @@
 //
 
 #import "ViewController.h"
-@import Charts.Swift;
-
 
 @interface ViewController ()
 
@@ -44,7 +42,6 @@
     [self.scrollView setContentInset: UIEdgeInsetsMake(10, 0, 0, 0)];
     [self.scrollView insertSubview:refreshControl atIndex:0];
     
-    _lineChartView.noDataText = @"You need to provide data for the chart.";
     
 }
 
@@ -69,15 +66,24 @@
                                 data.totalCount]];
         [self.view setNeedsDisplay];
         
-        // chart
+        // chart - move this stuff somewhere else once it works
         self.lineChartView.drawGridBackgroundEnabled = NO;
-                
+        self.lineChartView.legend.enabled = NO;
+        self.lineChartView.rightAxis.enabled = NO;
+        self.lineChartView.leftAxis.drawAxisLineEnabled = NO;
+        self.lineChartView.leftAxis.drawGridLinesEnabled = NO;
+        self.lineChartView.xAxis.drawAxisLineEnabled = NO;
+        self.lineChartView.xAxis.drawGridLinesEnabled = NO;
+        
         NSMutableArray *yvals = [[NSMutableArray alloc] init];
         for(int i = 0; i<data.counts.count; i++){
             [yvals addObject:[[ChartDataEntry alloc] initWithValue:[data.counts[i] doubleValue] xIndex:i]];
         }
         LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yvals];
         [dataSet setColor:UIColor.blackColor];
+        dataSet.drawCirclesEnabled = NO;
+        dataSet.drawCubicEnabled = YES;
+        dataSet.drawValuesEnabled = NO;
         
         LineChartData *chartData = [[LineChartData alloc] initWithXVals:data.timestamps dataSet:dataSet];
         
