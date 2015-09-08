@@ -13,7 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *Message;
 @property (weak, nonatomic) IBOutlet UILabel *Details;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet LineChartView *lineChartView;
+@property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *chartView;
 
 @property (weak, nonatomic) UIRefreshControl *refreshControl;
 
@@ -67,27 +67,13 @@
         [self.view setNeedsDisplay];
         
         // chart - move this stuff somewhere else once it works
-        self.lineChartView.drawGridBackgroundEnabled = NO;
-        self.lineChartView.legend.enabled = NO;
-        self.lineChartView.rightAxis.enabled = NO;
-        self.lineChartView.leftAxis.drawAxisLineEnabled = NO;
-        self.lineChartView.leftAxis.drawGridLinesEnabled = NO;
-        self.lineChartView.xAxis.drawAxisLineEnabled = NO;
-        self.lineChartView.xAxis.drawGridLinesEnabled = NO;
+
         
         NSMutableArray *yvals = [[NSMutableArray alloc] init];
         for(int i = 0; i<data.counts.count; i++){
-            [yvals addObject:[[ChartDataEntry alloc] initWithValue:[data.counts[i] doubleValue] xIndex:i]];
+          //  [yvals addObject:[[ChartDataEntry alloc] initWithValue:[data.counts[i] doubleValue] xIndex:i]];
         }
-        LineChartDataSet *dataSet = [[LineChartDataSet alloc] initWithYVals:yvals];
-        [dataSet setColor:UIColor.blackColor];
-        dataSet.drawCirclesEnabled = NO;
-        dataSet.drawCubicEnabled = YES;
-        dataSet.drawValuesEnabled = NO;
         
-        LineChartData *chartData = [[LineChartData alloc] initWithXVals:data.timestamps dataSet:dataSet];
-        
-        [_lineChartView setData:chartData];
         [_refreshControl endRefreshing];
     });
 }

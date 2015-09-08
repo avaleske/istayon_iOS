@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
@@ -40,9 +40,18 @@
                                             <rect key="frame" x="133" y="261" width="365" height="110"/>
                                         </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHe-QY-rHE" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="138" y="332.5" width="300" height="200"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-gx-b7w" customClass="BEMSimpleLineGraphView">
+                                        <rect key="frame" x="150" y="342" width="300" height="188"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                                <color key="value" red="1" green="0.40882866470000001" blue="0.2293804592" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="aS0-t8-HwK"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="hRg-ve-i5c"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -54,8 +63,6 @@
                                     <constraint firstAttribute="trailing" secondItem="EbV-BG-hni" secondAttribute="trailing" constant="8" id="dsr-zP-6gw"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="50" id="fnI-JG-F3P"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="centerY" multiplier="0.25" id="q3z-P5-DQk"/>
-                                    <constraint firstItem="sHe-QY-rHE" firstAttribute="top" secondItem="eEy-81-DmI" secondAttribute="bottom" constant="50.5" id="qq2-dm-2OF"/>
-                                    <constraint firstAttribute="centerX" secondItem="sHe-QY-rHE" secondAttribute="centerX" constant="12" id="zbv-eL-iD8"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
@@ -70,7 +77,7 @@
                     <connections>
                         <outlet property="Details" destination="eEy-81-DmI" id="tQA-3O-WKE"/>
                         <outlet property="Message" destination="EbV-BG-hni" id="OqS-Ez-zIg"/>
-                        <outlet property="lineChartView" destination="sHe-QY-rHE" id="UHf-NF-HY6"/>
+                        <outlet property="chartView" destination="J8c-gx-b7w" id="X4P-46-i72"/>
                         <outlet property="scrollView" destination="4c5-Ij-N6I" id="H1d-tM-aiN"/>
                     </connections>
                 </viewController>
