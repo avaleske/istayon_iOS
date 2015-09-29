@@ -15,6 +15,7 @@
     
     self.counts = [dict valueForKey:@"counts"];
     self.timestamps = [dict valueForKey:@"timestamps"];
+    self.ticks = [dict valueForKey:@"xticks"];
     self.lastLikedPhrase = [dict valueForKey:@"last_liked"];
     self.totalCount = [dict valueForKey:@"count"];
     self.message = [dict valueForKey:@"message"];
@@ -25,8 +26,9 @@
 - (LikeData *)initWithTestData
 {
     
-    self.counts = @[@0, @0, @0, @2, @5, @0, @1, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @3, @0, @0, @1, @0];
+    self.counts = @[@0, @0, @0, @2, @5, @0, @1, @0, @-1, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @0, @3, @0, @0, @1, @0];
     self.timestamps = @[@1440716400, @1440716700, @1440717000, @1440717300, @1440717600, @1440717900, @1440718200, @1440718500, @1440718800, @1440719100, @1440719400, @1440719700, @1440720000, @1440720300, @1440720600, @1440720900, @1440721200, @1440721500, @1440721800, @1440722100, @1440722400, @1440722700, @1440723000, @1440723300, @1440723600, @1440723648];
+    self.ticks = @[@"2", @"", @"", @"", @"1", @"", @"", @"", @"0"];
     self.lastLikedPhrase = @"It's been some time since she liked something";
     self.totalCount = @13013;
     self.message = @"Yep, Taylor's online! Look this test message is so long it has to wrap.";

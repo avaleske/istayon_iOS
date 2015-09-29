@@ -12,7 +12,7 @@
 
 @property NSArray *timestamps;
 @property NSArray *counts;
-@property NSArray *Ticks;
+@property NSArray *ticks;
 @property NSNumber *xMin;
 @property NSString *lastLikedPhrase;
 @property NSNumber *totalCount;

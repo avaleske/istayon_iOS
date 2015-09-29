@@ -14,13 +14,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *Details;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *chartView;
-
 @property (weak, nonatomic) UIRefreshControl *refreshControl;
+
 
 @end
 
 @implementation ViewController {
-    NSDictionary *_data;
+    LikeData *likeData;
     DataManager *_manager;
     
 }
@@ -42,8 +42,12 @@
     [self.scrollView setContentInset: UIEdgeInsetsMake(10, 0, 0, 0)];
     [self.scrollView insertSubview:refreshControl atIndex:0];
     
-    
-}
+    // graph settings
+    self.chartView.enableBezierCurve = YES;
+    self.chartView.enableYAxisLabel = YES;
+    self.chartView.enableXAxisLabel = YES;
+    self.chartView.enableReferenceAxisFrame = YES;
+    self.chartView.animationGraphStyle = BEMLineAnimationFade;}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -56,6 +60,28 @@
 
 }
 
+#pragma mark - BEMSimpleLineGraphDelegate
+
+//- (CGFloat)minValueForLineGraph:(BEMSimpleLineGraphView *)graph{
+//    return 1.0;
+//}
+
+#pragma mark - BEMSompleLineGraphDataSource
+
+- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph{
+    return likeData.counts.count;
+}
+
+
+- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index{
+    return [likeData.counts[index] floatValue];
+}
+
+- (nullable NSString *)lineGraph:(nonnull BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index{
+    if(index % 12 == 0) return [NSString stringWithFormat:@"%@  ", @(2 - (index / 12))];
+    else return @"";
+}
+
 #pragma mark - DataManagerDelegate
 
 - (void)didRecieveLikeData:(LikeData *)data {
@@ -64,16 +90,10 @@
         [self.Details setText: [NSString stringWithFormat:@"\u2022 %@\n\u2022 She's liked %@ things.",
                                 data.lastLikedPhrase,
                                 data.totalCount]];
+        self->likeData = data;
+        
         [self.view setNeedsDisplay];
-        
-        // chart - move this stuff somewhere else once it works
-
-        
-        NSMutableArray *yvals = [[NSMutableArray alloc] init];
-        for(int i = 0; i<data.counts.count; i++){
-          //  [yvals addObject:[[ChartDataEntry alloc] initWithValue:[data.counts[i] doubleValue] xIndex:i]];
-        }
-        
+        [self.chartView reloadGraph];
         [_refreshControl endRefreshing];
     });
 }

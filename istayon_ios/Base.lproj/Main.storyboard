@@ -18,11 +18,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
-                                        <rect key="frame" x="8" y="75" width="584" height="116.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
+                                        <rect key="frame" x="8" y="75" width="584" height="117"/>
                                         <string key="text">Lorem ipsum blah blah blah I need to make sure this works for long lines of text that wrap.  asdf sadf asdf asdf asdf asdf asdf asdf asdf asdf asdf sadf sadfasdf sadf sadf sadf</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -31,7 +31,7 @@
                                             <rect key="frame" x="8" y="138" width="384" height="88"/>
                                         </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
                                         <rect key="frame" x="60" y="241" width="480" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,13 +40,40 @@
                                             <rect key="frame" x="133" y="261" width="365" height="110"/>
                                         </variation>
                                     </label>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-gx-b7w" customClass="BEMSimpleLineGraphView">
-                                        <rect key="frame" x="150" y="342" width="300" height="188"/>
+                                    <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="547" placeholderIntrinsicHeight="215" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-gx-b7w" customClass="BEMSimpleLineGraphView">
+                                        <rect key="frame" x="0.0" y="323" width="600" height="242"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="pDC-n8-mNp"/>
+                                        </constraints>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
-                                                <color key="value" red="1" green="0.40882866470000001" blue="0.2293804592" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthLine">
+                                                <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="sizePoint">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="widthReferenceLines">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
+                                                <color key="value" red="0.33621360243966492" green="0.87748579545454541" blue="0.70499157339193508" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
+                                                <color key="value" red="0.33621360239999998" green="0.87748579550000005" blue="0.70499157339999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorYaxisLabel">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="colorXaxisLabel">
+                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="aS0-t8-HwK"/>
@@ -54,14 +81,17 @@
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.40882866470000001" blue="0.2293804592" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="J8c-gx-b7w" secondAttribute="centerX" id="4Ir-3y-hIq"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" constant="8" id="4h3-AO-AHC"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="width" secondItem="4c5-Ij-N6I" secondAttribute="width" multiplier="0.8" id="Ewd-aH-7TF"/>
+                                    <constraint firstItem="J8c-gx-b7w" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" id="Iou-I1-p6B"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" id="IuS-QD-RpN"/>
                                     <constraint firstAttribute="centerX" secondItem="EbV-BG-hni" secondAttribute="centerX" id="Wbn-ml-Qeg"/>
                                     <constraint firstAttribute="trailing" secondItem="EbV-BG-hni" secondAttribute="trailing" constant="8" id="dsr-zP-6gw"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="50" id="fnI-JG-F3P"/>
+                                    <constraint firstAttribute="trailing" secondItem="J8c-gx-b7w" secondAttribute="trailing" id="oxd-vo-KZb"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="centerY" multiplier="0.25" id="q3z-P5-DQk"/>
                                 </constraints>
                             </scrollView>

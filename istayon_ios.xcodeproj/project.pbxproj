@@ -48,7 +48,6 @@
 		506EFD2A3632E252725966A4 /* Pods-istayon_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-istayon_ios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-istayon_ios/Pods-istayon_ios.debug.xcconfig"; sourceTree = "<group>"; };
 		BC906CD25945893970556128 /* Pods-istayon_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-istayon_ios.release.xcconfig"; path = "Pods/Target Support Files/Pods-istayon_ios/Pods-istayon_ios.release.xcconfig"; sourceTree = "<group>"; };
 		DFF79435CAB0C0FF692E73CA /* Pods_istayon_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_istayon_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1AEE9251B9B6E1200023CCD /* istayon_ios-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "istayon_ios-Bridging-Header.h"; sourceTree = "<group>"; };
 		E1D743021B8C114700CDA7CE /* istayon_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = istayon_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743031B8C114700CDA7CE /* istayon_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = istayon_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1D743051B8C142500CDA7CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = istayon_ios/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,7 +113,6 @@
 		E1FB3ACF1B8C0F220077733F = {
 			isa = PBXGroup;
 			children = (
-				E1AEE9251B9B6E1200023CCD /* istayon_ios-Bridging-Header.h */,
 				E1FB3ADA1B8C0F220077733F /* istayon_ios */,
 				E1FB3AF71B8C0F230077733F /* istayon_iosTests */,
 				E1D743021B8C114700CDA7CE /* istayon_ios.app */,

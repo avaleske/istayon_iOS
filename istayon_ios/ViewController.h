@@ -16,6 +16,5 @@
 
 @interface ViewController : UIViewController <DataManagerDelegate, BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate>
 
-
 @end
 
