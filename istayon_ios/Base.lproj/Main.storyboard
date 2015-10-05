@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -18,14 +19,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c5-Ij-N6I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbV-BG-hni" userLabel="Message">
                                         <rect key="frame" x="8" y="75" width="584" height="117"/>
+                                        <animations/>
                                         <string key="text">Lorem ipsum blah blah blah I need to make sure this works for long lines of text that wrap.  asdf sadf asdf asdf asdf asdf asdf asdf asdf asdf asdf sadf sadfasdf sadf sadf sadf</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="8" y="138" width="384" height="88"/>
@@ -33,69 +35,57 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail one  Detail two" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eEy-81-DmI">
                                         <rect key="frame" x="60" y="241" width="480" height="41"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="133" y="261" width="365" height="110"/>
                                         </variation>
                                     </label>
-                                    <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="547" placeholderIntrinsicHeight="215" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-gx-b7w" customClass="BEMSimpleLineGraphView">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="20" translatesAutoresizingMaskIntoConstraints="NO" id="fma-6z-ghB" customClass="JBLineChartFooterView">
+                                        <rect key="frame" x="0.0" y="568" width="600" height="32"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8YV-xJ-TjE">
+                                                <rect key="frame" x="189" y="0.0" width="592" height="0.0"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.41117551563912402" green="0.74686733802387006" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleAspectFit" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="547" placeholderIntrinsicHeight="215" translatesAutoresizingMaskIntoConstraints="NO" id="J8c-gx-b7w" customClass="JBLineChartView">
                                         <rect key="frame" x="0.0" y="323" width="600" height="242"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="pDC-n8-mNp"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="widthLine">
-                                                <real key="value" value="4"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="sizePoint">
-                                                <real key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="widthReferenceLines">
-                                                <real key="value" value="0.0"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableXAxisLabel" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableYAxisLabel" value="YES"/>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorBottom">
-                                                <color key="value" red="0.33621360243966492" green="0.87748579545454541" blue="0.70499157339193508" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorTop">
-                                                <color key="value" red="0.33621360239999998" green="0.87748579550000005" blue="0.70499157339999996" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorLine">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorYaxisLabel">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="colorXaxisLabel">
-                                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="boolean" keyPath="enableBezierCurve" value="YES"/>
-                                        </userDefinedRuntimeAttributes>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="dataSource" destination="BYZ-38-t0r" id="aS0-t8-HwK"/>
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="hRg-ve-i5c"/>
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.40882866470000001" blue="0.2293804592" alpha="1" colorSpace="calibratedRGB"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.20784313725490194" green="0.27450980392156865" blue="0.36078431372549019" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="centerX" secondItem="J8c-gx-b7w" secondAttribute="centerX" id="4Ir-3y-hIq"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" constant="8" id="4h3-AO-AHC"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="width" secondItem="4c5-Ij-N6I" secondAttribute="width" multiplier="0.8" id="Ewd-aH-7TF"/>
                                     <constraint firstItem="J8c-gx-b7w" firstAttribute="leading" secondItem="4c5-Ij-N6I" secondAttribute="leading" id="Iou-I1-p6B"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="centerX" secondItem="eEy-81-DmI" secondAttribute="centerX" id="IuS-QD-RpN"/>
+                                    <constraint firstItem="fma-6z-ghB" firstAttribute="width" secondItem="J8c-gx-b7w" secondAttribute="width" id="MEH-zu-K6M"/>
+                                    <constraint firstItem="fma-6z-ghB" firstAttribute="top" secondItem="J8c-gx-b7w" secondAttribute="bottom" id="Oib-bu-2Uj"/>
                                     <constraint firstAttribute="centerX" secondItem="EbV-BG-hni" secondAttribute="centerX" id="Wbn-ml-Qeg"/>
+                                    <constraint firstItem="8YV-xJ-TjE" firstAttribute="centerX" secondItem="J8c-gx-b7w" secondAttribute="centerX" id="blk-Zg-j7l"/>
                                     <constraint firstAttribute="trailing" secondItem="EbV-BG-hni" secondAttribute="trailing" constant="8" id="dsr-zP-6gw"/>
+                                    <constraint firstItem="fma-6z-ghB" firstAttribute="leading" secondItem="J8c-gx-b7w" secondAttribute="leading" id="eaU-QC-q1T"/>
                                     <constraint firstItem="eEy-81-DmI" firstAttribute="top" secondItem="EbV-BG-hni" secondAttribute="bottom" constant="50" id="fnI-JG-F3P"/>
                                     <constraint firstAttribute="trailing" secondItem="J8c-gx-b7w" secondAttribute="trailing" id="oxd-vo-KZb"/>
                                     <constraint firstItem="EbV-BG-hni" firstAttribute="top" secondItem="4c5-Ij-N6I" secondAttribute="centerY" multiplier="0.25" id="q3z-P5-DQk"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="4c5-Ij-N6I" secondAttribute="trailing" constant="-16" id="4D9-TF-Jli"/>
@@ -107,6 +97,7 @@
                     <connections>
                         <outlet property="Details" destination="eEy-81-DmI" id="tQA-3O-WKE"/>
                         <outlet property="Message" destination="EbV-BG-hni" id="OqS-Ez-zIg"/>
+                        <outlet property="chartFooterView" destination="fma-6z-ghB" id="Cos-th-XIi"/>
                         <outlet property="chartView" destination="J8c-gx-b7w" id="X4P-46-i72"/>
                         <outlet property="scrollView" destination="4c5-Ij-N6I" id="H1d-tM-aiN"/>
                     </connections>

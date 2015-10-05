@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-#import "BEMSimpleLineGraphView.h"
+#import "JBLineChartView.h"
+#import "JBLineChartFooterView.h"
+//#import "JBChartInformationView.h"
 
 #import "DataManager.h"
 #import "Communicator.h"
 #import "LikeData.h"
 
-@interface ViewController : UIViewController <DataManagerDelegate, BEMSimpleLineGraphDataSource, BEMSimpleLineGraphDelegate>
+@interface ViewController : UIViewController <DataManagerDelegate, JBChartViewDataSource, JBChartViewDelegate>
 
 @end
 

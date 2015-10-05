@@ -3,15 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8017EDDC8B753D201685A18C /* Pods_istayon_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF79435CAB0C0FF692E73CA /* Pods_istayon_ios.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8017EDDC8B753D201685A18C /* Pods_istayon_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF79435CAB0C0FF692E73CA /* Pods_istayon_ios.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		E1D743061B8C142500CDA7CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1D743041B8C142500CDA7CE /* Main.storyboard */; };
 		E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743081B8FBEB200CDA7CE /* LikeData.m */; };
 		E1D7430C1B8FF79A00CDA7CE /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D7430B1B8FF79A00CDA7CE /* DataManager.m */; };
 		E1D743111B91328D00CDA7CE /* Communicator.m in Sources */ = {isa = PBXBuildFile; fileRef = E1D743101B91328D00CDA7CE /* Communicator.m */; };
+		E1E001A91BC26896000F09DD /* JBLineChartFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1E001A81BC26896000F09DD /* JBLineChartFooterView.m */; settings = {ASSET_TAGS = (); }; };
 		E1FB3ADE1B8C0F220077733F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3ADD1B8C0F220077733F /* main.m */; };
 		E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE01B8C0F220077733F /* AppDelegate.m */; };
 		E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1FB3AE21B8C0F220077733F /* istayon_ios.xcdatamodeld */; };
@@ -59,6 +60,8 @@
 		E1D7430E1B91320100CDA7CE /* CommunicatorDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommunicatorDelegate.h; sourceTree = "<group>"; };
 		E1D7430F1B91328D00CDA7CE /* Communicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Communicator.h; sourceTree = "<group>"; };
 		E1D743101B91328D00CDA7CE /* Communicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Communicator.m; sourceTree = "<group>"; };
+		E1E001A71BC26896000F09DD /* JBLineChartFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JBLineChartFooterView.h; sourceTree = "<group>"; };
+		E1E001A81BC26896000F09DD /* JBLineChartFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JBLineChartFooterView.m; sourceTree = "<group>"; };
 		E1E93A2D1B9EA11800E088FC /* libBEMSimpleLineGraph.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libBEMSimpleLineGraph.a; path = "Pods/../build/Debug-iphoneos/libBEMSimpleLineGraph.a"; sourceTree = "<group>"; };
 		E1FB3ADC1B8C0F220077733F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1FB3ADD1B8C0F220077733F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				E1FB3AE01B8C0F220077733F /* AppDelegate.m */,
 				E1FB3AE51B8C0F220077733F /* ViewController.h */,
 				E1FB3AE61B8C0F220077733F /* ViewController.m */,
+				E1E001A71BC26896000F09DD /* JBLineChartFooterView.h */,
+				E1E001A81BC26896000F09DD /* JBLineChartFooterView.m */,
 				E1FB3AEB1B8C0F220077733F /* Images.xcassets */,
 				E1FB3AED1B8C0F220077733F /* LaunchScreen.xib */,
 				E1D743041B8C142500CDA7CE /* Main.storyboard */,
@@ -234,7 +239,7 @@
 				};
 			};
 			buildConfigurationList = E1FB3AD31B8C0F220077733F /* Build configuration list for PBXProject "istayon_ios" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -327,6 +332,7 @@
 			files = (
 				E1FB3AE41B8C0F220077733F /* istayon_ios.xcdatamodeld in Sources */,
 				E1D743111B91328D00CDA7CE /* Communicator.m in Sources */,
+				E1E001A91BC26896000F09DD /* JBLineChartFooterView.m in Sources */,
 				E1FB3AE11B8C0F220077733F /* AppDelegate.m in Sources */,
 				E1D743091B8FBEB200CDA7CE /* LikeData.m in Sources */,
 				E1FB3AE71B8C0F220077733F /* ViewController.m in Sources */,

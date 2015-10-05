@@ -13,7 +13,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *Message;
 @property (weak, nonatomic) IBOutlet UILabel *Details;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
-@property (weak, nonatomic) IBOutlet BEMSimpleLineGraphView *chartView;
+@property (weak, nonatomic) IBOutlet JBLineChartView *chartView;
+@property (weak, nonatomic) IBOutlet JBLineChartFooterView *chartFooterView;
 @property (weak, nonatomic) UIRefreshControl *refreshControl;
 
 
@@ -43,11 +44,13 @@
     [self.scrollView insertSubview:refreshControl atIndex:0];
     
     // graph settings
-    self.chartView.enableBezierCurve = YES;
-    self.chartView.enableYAxisLabel = YES;
-    self.chartView.enableXAxisLabel = YES;
-    self.chartView.enableReferenceAxisFrame = YES;
-    self.chartView.animationGraphStyle = BEMLineAnimationFade;}
+    [self.chartView setMinimumValue:0.0];
+    
+    self.chartFooterView.leftLabel.text = @"2 Hours Ago";
+    self.chartFooterView.rightLabel.text = @"Now";
+    
+    self.chartView.footerView = self.chartFooterView;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -60,27 +63,46 @@
 
 }
 
-#pragma mark - BEMSimpleLineGraphDelegate
+#pragma mark - JBChartViewDelegate
 
-//- (CGFloat)minValueForLineGraph:(BEMSimpleLineGraphView *)graph{
-//    return 1.0;
-//}
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView verticalValueForHorizontalIndex:(NSUInteger)horizontalIndex atLineIndex:(NSUInteger)lineIndex
+{
+    return [likeData.counts[horizontalIndex] floatValue];
+}
 
-#pragma mark - BEMSompleLineGraphDataSource
+- (CGFloat)lineChartView:(JBLineChartView *)lineChartView widthForLineAtLineIndex:(NSUInteger)lineIndex
+{
+    return 4.0f;
+}
 
-- (NSInteger)numberOfPointsInLineGraph:(BEMSimpleLineGraphView *)graph{
+- (UIColor *)lineChartView:(JBLineChartView *)lineChartView colorForLineAtLineIndex:(NSUInteger)lineIndex
+{
+    return [UIColor greenColor];
+}
+
+#pragma mark - JBChartViewDataSource
+
+- (NSUInteger)numberOfLinesInLineChartView:(JBLineChartView *)lineChartView
+{
+    return 1;
+}
+
+- (NSUInteger)lineChartView:(JBLineChartView *)lineChartView numberOfVerticalValuesAtLineIndex:(NSUInteger)lineIndex
+{
+    // only 1 line so we ignore the lineIndex parameter
     return likeData.counts.count;
 }
 
-
-- (CGFloat)lineGraph:(BEMSimpleLineGraphView *)graph valueForPointAtIndex:(NSInteger)index{
-    return [likeData.counts[index] floatValue];
+- (BOOL)lineChartView:(JBLineChartView *)lineChartView smoothLineAtLineIndex:(NSUInteger)lineIndex
+{
+    return YES;
 }
 
-- (nullable NSString *)lineGraph:(nonnull BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index{
-    if(index % 12 == 0) return [NSString stringWithFormat:@"%@  ", @(2 - (index / 12))];
-    else return @"";
-}
+
+//- (nullable NSString *)lineGraph:(nonnull BEMSimpleLineGraphView *)graph labelOnXAxisForIndex:(NSInteger)index{
+//    if(index % 12 == 0) return [NSString stringWithFormat:@"%@  ", @(2 - (index / 12))];
+//    else return @"";
+//}
 
 #pragma mark - DataManagerDelegate
 
@@ -93,7 +115,7 @@
         self->likeData = data;
         
         [self.view setNeedsDisplay];
-        [self.chartView reloadGraph];
+        [self.chartView reloadData];
         [_refreshControl endRefreshing];
     });
 }
